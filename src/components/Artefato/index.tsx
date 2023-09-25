@@ -14,7 +14,7 @@ const Artefato = ({
   qtdArtefato,
   setQtdArtefato,
 }: ArtefatoProps) => {
-  const size = 50
+  const size = 100
   const controls = useDragControls()
   const [isIn, setIsIn] = useState(false)
 
@@ -34,6 +34,8 @@ const Artefato = ({
         break
     }
   }
+
+  
 
   function startDrag(event: React.PointerEvent) {
     controls.start(event, { snapToCursor: true })

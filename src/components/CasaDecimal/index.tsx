@@ -1,9 +1,18 @@
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useTransform  } from 'framer-motion'
+import * as React from "react";
+import '../Artefato/index';
+import Artefato from '../Artefato/index';
+
+
 
 interface CasaDecimalProps {
   tipo: 'unidade' | 'dezena' | 'centena'
   artefatos: number
 }
+
+
+
+
 
 export default function CasaDecimal({ tipo, artefatos }: CasaDecimalProps) {
   const handleColor = (tipo: string) => {
