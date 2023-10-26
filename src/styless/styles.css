@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+
+
+
+/* styless.css */
+.board-container {
+  width: 100%; /* Ocupa a largura total */
+  max-width: 1000px; /* Largura máxima de 1000px */
+  height: auto; /* Altura automática para manter a proporção */
+  display: flex;
+  
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--branco-paz);
+}
+
+/* Estilo para elementos internos dentro do board-container */
+.board-item {
+  width: 50%; /* Cada elemento ocupa metade da largura do board-container */
+  padding: 1rem;
+  box-sizing: border-box; /* Inclui o preenchimento no cálculo de largura */
+  /* Outros estilos para os elementos internos */
+}
+
+
+
+.board-side-left {
+  width: 8%;
+  height: 95%;
+  margin: 1%;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.3s;
+  background-color: var(--cinza-harpia);
+}
+  
+/* styless.css */
+.board-decimal-place {
+  height: 95%;
+  width: 27.333%;
+  margin: 1%;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.board-decimal-place h1 {
+  font-size: 200px;
+  margin-bottom: 16px;
+  transition: 1.5s ease-in-out;
+}
+
+
+
+
+
+/* Outras cores personalizadas */
+/* styless.css */
+.board-side-right {
+  width: 8%;
+  height: 95%;
+  margin: 1%;
+  display: flex;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.3s;
+  background-color: var(--vermelho-ucari);
+}
