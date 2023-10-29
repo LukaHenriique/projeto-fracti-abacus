@@ -17,12 +17,14 @@ interface BoardSideRightRenderProps {
   children?: ReactNode
   type: PlaceValueType
   position?: PositionType
+  onAddBead: (type: PlaceValueType) => void
 }
 
 export const BoardSideRightRender: React.FC<BoardSideRightRenderProps> = ({
   children,
   type,
   position,
+  onAddBead,
 }) => {
   const borderRadius = position === PositionType.top ? '8px' : '0px'
 
@@ -40,8 +42,12 @@ export const BoardSideRightRender: React.FC<BoardSideRightRenderProps> = ({
           position === PositionType.bottom ? '8px' : '0px',
         backgroundColor: `${choosingColor.colorDecimalPlace(type)}`,
       }}
+      onDoubleClick={() => {
+        onAddBead(type)
+      }}
     >
       {children}
     </div>
   )
 }
+

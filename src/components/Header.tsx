@@ -9,7 +9,7 @@
 // Header.tsx
 import { ReactNode } from 'react';
 import { Logo } from '@/components/Logo';
-import '../styless/styles.css';
+import '../styles/styles.css';
 
 interface HeaderProps {
   children?: ReactNode;

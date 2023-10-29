@@ -9,7 +9,7 @@
 'use client'
 
 import { ReactNode } from 'react';
-import '../../styless/styles.css'; // Importe seu arquivo CSS
+import '../../styles/styles.css'; // Importe seu arquivo CSS
 
 interface BoardProps {
   children?: ReactNode;
@@ -18,7 +18,9 @@ interface BoardProps {
 export const Board: React.FC<BoardProps> = ({ children }) => {
   return (
     <div className="board-container"> {/* Aplicando a classe CSS */}
+    
       {children}
     </div>
+  
   );
 }

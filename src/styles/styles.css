@@ -4,7 +4,6 @@ body {
     padding: 0;
     background-color: var(--braco-isabeline);
   }
-  
 /* Main*/
 .main-container {
     display: flex;
@@ -16,7 +15,6 @@ body {
     background-color: var(--branco-isabeline);
   }
   
-
   /* Logo*/
 .logo-container {
     padding: 25px;
@@ -41,20 +39,20 @@ body {
     height: 20%;
     background-color: var(--branco-isabeline);
   }
-
   /* Bead */
-.bead-container {
-    z-index: 1;
-    width: 7%;
-    padding-top: 7%;
-    max-width: 7%;
-    min-width: 4%;
-    position: absolute;
-    touch-action: none;
-    border-radius: 50%;
-  }
-  
-  /* ele que trabalha a cor fora dos containes Background */
+  .bead-container {
+    transition-timing-function: linear;
+    pointer-events: auto;
+      z-index: 1;
+      width: 27.333%;
+      padding-top: 27.333%;
+      max-width: 27.333%;
+      min-width: 27.333%;
+      position: absolute;
+      touch-action: none;
+      border-radius: 70%;
+    }
+/* ele que trabalha a cor fora dos containes Background */
 .background-container {
     /* Exemplo
     width: 100%;
@@ -70,7 +68,6 @@ body {
     background-color: inherit; 
     min-Height: 300px;
 }
-
   /* Contenier branco, onde esta todo abacus dentro */
   .board-container {
     width: 100%;
@@ -80,14 +77,13 @@ body {
     min-height: 50px;
     display: flex;
     width: clamp(200px, 100%, 10100px);
-    overflow: hidden;
+    overflow: hidden; 
     flex-direction: grid-template-columns;
     /* flex: 0 0 200px; */
     border-Radius: 5px;
     justify-Content:center;
     background-Color: var(--branco-paz);
   }
-
 /* BoardSideLeft apagador, preto*/
 .board-side-left {
     width: 8%;
@@ -101,7 +97,18 @@ body {
     transition: background-color 0.3s;
     background-Color: var(--cinza-harpia);
   }
-  /* cores, BoardDecimalPlace cetena,dezena,unidade*/
+  .board-side-left:hover{
+    filter:blur(1px);
+    transform: scale(0.9, 0.9);
+  }
+ .board-side-left> * {
+    pointer-events: auto-fill;
+}
+.board-side-left:hover > *:hover {
+    transform: scale(1.1, 1.1);
+    filter: none;
+}
+/* cores, BoardDecimalPlace cetena,dezena,unidade*/
 .board-decimal-place {
     height: 95%;
     display: grid;
@@ -113,43 +120,66 @@ body {
     align-Items: center;
     flex-Direction: column;
     justify-Content: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.01s;
     /*grid-template-columns: repeat(auto-fill,minmax(150px, 1rf));*/
   }
-  
+  .board-decimal-place:hover{
+    filter: blur(0.3px);
+    transform: scale(1,1);
+  }
+  .board-decimal-place > * {
+    pointer-events: auto;
+  }
+.board-decimal-place:hover > *:hover {
+    transform: scale(2.1, 2.1);
+    filter: none;
+}
    /* texto dentro da quantidade numero centena, dezena, unidade */
   .board-decimal-place h1 {
     font-Size: 70px;
     margin-Bottom: 16px;
     transition: 1.5s ease-in-out;
   }
-  
    /* texto dentro centena, dezena, unidade */
   .board-decimal-place span {
-    font-Size: 20px;
+    font-Size: 20px;  
     transition: 1.5s ease-in-out;
   }
 
   /*cores BoardSideRight, onde sera adicionado as fixas */
-.board-side-right {
+  .board-side-right {
     width: 8%;
     height: 95%;
     margin: 1%;
     display: flex;
+    gap: 5px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    align-Items: center;
-    flex-Direction: column;
-    justify-Content: center;
+    border-bottom-right-radius: 0; 
+    border-radius:8px;
+    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
     transition: background-color 0.3s;
-    
-    
   }
-  
+  /* 
+    .board-side-right:hover::after {
+    background-color: 
+    opacity: 0.7;
+    filter: blur(0.5px);
+    transform: scale(0.9, 0.9);
+  }
+ .board-side-right > * {
+    pointer-events: auto-fill;
+}
+.board-side-right:hover > * {
+    filter: blur(0.5px);
+    transform: scale(0.9, 0.9);
+}
+.board-side-right:hover > *:hover {
+    transform: scale(1.1, 1.1);
+    filter: none;
+}
+  */
  
-  
-  
-  
-

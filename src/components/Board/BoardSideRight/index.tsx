@@ -7,47 +7,19 @@
 //
 
 'use client'
-import React from 'react';
-import '../../../styless/styles.css'; // Importe o arquivo CSS
-import { Bead } from '@/components/Bead';
-import { PlaceValueType, PositionType } from '@/domain/CustomTypesModel';
-import { useAbacusStore } from '@/stores/useBeadStore';
-import { BoardSideRightRender } from './BoardSideRightRender';
+import React, { ReactNode } from 'react';
+import '../../../styles/styles.css'; // Importe o arquivo CSS
+interface BoardSideRightProps {
+  children?: ReactNode
+}
 
-
-
-
-export const BoardSideRight = () => {
-  const {
-    beads: { unit, ten, hundred },
-  } = useAbacusStore();
-
+export const BoardSideRight: React.FC<BoardSideRightProps> = ({ children }) => {
   return (
-    <div id="add" className="board-side-right"> {/* Aplicando a classe CSS */}
-      <BoardSideRightRender
-        type={PlaceValueType.unit}
-        position={PositionType.top}
-      >
-        {unit.map((bead) => (
-          <Bead key={bead.id} id={bead.id} type={bead.type} />
-        ))}
-      </BoardSideRightRender>
-      <BoardSideRightRender
-        type={PlaceValueType.ten}
-        position={PositionType.middle}
-      >
-        {ten.map((bead) => (
-          <Bead key={bead.id} id={bead.id} type={bead.type} />
-        ))}
-      </BoardSideRightRender>
-      <BoardSideRightRender
-        type={PlaceValueType.hundred}
-        position={PositionType.bottom}
-      >
-        {hundred.map((bead) => (
-          <Bead key={bead.id} id={bead.id} type={bead.type} />
-        ))}
-      </BoardSideRightRender>
+    <div id={`add`} className="board-side-right">
+      {children}
     </div>
-  );
-};
+  )
+}
+
+
+

@@ -9,7 +9,7 @@
 'use client'
 import { ReactNode } from 'react';
 import { useScreenStore } from '@/stores/useScreenStore';
-import '../styless/styles.css';
+import '../styles/styles.css';
 
 type BackgroundProps = {
   children?: ReactNode;

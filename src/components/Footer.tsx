@@ -8,7 +8,7 @@
 
 // Footer.tsx
 import { ReactNode } from 'react';
-import '../styless/styles.css';
+import '../styles/styles.css';
 
 interface FooterProps {
   children?: ReactNode;

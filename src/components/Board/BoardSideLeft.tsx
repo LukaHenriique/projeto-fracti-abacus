@@ -7,12 +7,12 @@
 //
 'use client'
 import React from 'react';
-import '../../styless/styles.css'; // Importe o arquivo CSS
+import '../../styles/styles.css'; // Importe o arquivo CSS
 
 export const BoardSideLeft = () => {
   return (
     <div
-      id="delet"
+      id={'delet'}
       className="board-side-left" // Aplicando a classe CSS
     ></div>
   );

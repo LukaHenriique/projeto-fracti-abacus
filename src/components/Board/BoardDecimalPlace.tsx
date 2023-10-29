@@ -9,18 +9,15 @@
 'use client'
 
 import React from 'react';
-import '../../styless/styles.css';
+import '../../styles/styles.css';
 
 import { Descriptions } from '@/domain/CustomTypesModel';
 import { DecimalPlaceModel } from '@/domain/DecimalPlaceModel';
-import { AmountUseCase } from '@/application/AmountUseCase';
 import { ChoosingColorUseCase } from '@/application/ChoosingColorUseCase';
 
 const choosingColor = new ChoosingColorUseCase();
 
-export const BoardDecimalPlace = ({ type }: DecimalPlaceModel) => {
-  const amount = AmountUseCase(type);
-
+export const BoardDecimalPlace = ({ type, amount }: DecimalPlaceModel) => {
   return (
     <div
       id={type.toString()}
@@ -29,7 +26,7 @@ export const BoardDecimalPlace = ({ type }: DecimalPlaceModel) => {
         backgroundColor: choosingColor.colorDecimalPlace(type),
       }}
     >
-      <h1>{amount}</h1>
+    <h1>{amount}</h1>
       <span>{Descriptions[type]}</span>
     </div>
   );

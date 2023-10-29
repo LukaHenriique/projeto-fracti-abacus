@@ -8,7 +8,7 @@
 
 // Logo.tsx
 import Link from 'next/link';
-import '../styless/styles.css';
+import '../styles/styles.css';
 
 export const Logo = () => {
   return (
